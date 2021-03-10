@@ -12,24 +12,29 @@ paragraph.innerText = input1.value;
 addtodo.appendChild(paragraph);
 input1.value="";
 
-let ad=document.createElement('button');
+var ad=document.createElement('button');
 ad.innerHTML="EDIT";
 ad.className="add";
-let remove=document.createElement('button');
+var remove=document.createElement('button');
 remove.innerHTML="Remove";
 remove.className="remove";
 addtodo.appendChild(ad);
 addtodo.appendChild(remove); 
 ad.addEventListener('click',function(){
-innn();
-    
+
+var btn2=contain.appendChild(btn1);
+contain=btn2.parentElement;
+btn2.className="new";
+btn2.addEventListener('click',function(){
+    btn2=input1.nextElementSibling;             
+})    
     input1.value=paragraph.innerText;
 
-    addtodo.removeChild(ad);
-addtodo.removeChild(remove);
+     addtodo.removeChild(ad);
+ addtodo.removeChild(remove);
      addtodo.removeChild(paragraph);
-     var parent=btn1.parentNode;
-     parent.removeChild(btn1);
+    //  var parent=btn1.parentNode;
+    //  parent.removeChild(btn1);
 })
 
 remove.addEventListener('click',function(){
@@ -38,30 +43,15 @@ remove.addEventListener('click',function(){
 addtodo.removeChild(remove);
 
 })
-function innn(){
-    var newbtn=document.createElement("button")
-     document.body.appendChild(newbtn);
-    newbtn.innerHTML="Save";
-    newbtn.className="btn1";
-    console.log("this is");
+
+    // btn1.innerHTML="+";
+    // btn1.className="btn1";
+//    console.log("this is");
     // input1.insertAdjacentElement("afterbegin",newbtn);
-    newbtn.addEventListener('click',function(){
-        var  newinput=input1.value;
-        var para=document.createElement('p');
-        para.innerText=newinput;
-        console.log(para);
-        end.appendChild(para);
-        end.className="divv";
-    document.body.removeChild(newbtn);
-    document.body.appendChild(btn1);
-    btn1.className="btn2";
-     input1.value="";
-
-   })
-}
-
-
-
-
 })
+
+
+
+
+
 
