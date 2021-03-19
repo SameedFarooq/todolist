@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript: add edit delete LI</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <style>
+            .hide{
+         visibility: hidden;
+        /* display: none; */
+    }
+     .show{
+
+ visibility: show; 
+    } 
+          .navi{
+            /* display: flex;
+            flex-direction: column; */
+            margin: auto;
+            /* background-image: url(green.jpg); */
+          }  
+body{
+    background-color: rgb(23, 129, 143);
+}
+li{cursor: pointer;
+   font-size:medium;
+}
+    .contain{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contain1{
+        display: flex;
+    
+        position: relative;
+        left: 500px;
+    top: 22px;
+    }
+    input{
+        border-radius: 9px;
+        outline: none;
+        width: 266px;
+    padding: 4px;
+    position: sticky;
+    }
+    .hide{
+         visibility: hidden;
+        /* display: none; */
+    }
+     .show{
+
+ visibility: show; 
+/* display: ; */
+/* display: unset; */
+    } 
+    .btn11{
+        padding: 3px 7px;
+        font-size: 13px;
+        color:rgb(255, 245, 245)!important ;
+    }
+    .bord{
+     border-right:3px solid rgba(255, 255, 255,1); 
+        /* border-right: rgb(255, 255, 255); */
+        /* background-color: rgba(4, 73, 4,0.8); */
+        background-image: url(blue1.jpg);
+        
+    }
+    a{
+        color: rgba(255, 245, 245,0.9);
+    }
+    i{
+        font-size: 28px;
+        margin-right: 2px;
+    }
+    .colo{
+        color: rgb(255, 255, 255);
+    }
+    .colo:hover{
+        color:  rgb(255, 255, 255);
+    }
+        </style>
+        
+    </head>
+    <body>
+       <div class="contain">
+        <input type="text" class="mr-2"id="txt">
+        <button id="add" class="btn btn-warning mr-2">Add</button>
+        <button id="edit" class="btn btn-success mr-2">Update</button>
+        <button id="remove"class="btn btn-danger mr-2">Delete</button>
+        <button id="cancel"class="btn btn-secondary mr-2">Cancel</button>
+    </div>    
+    <div class="contain1"> 
+    <ul id="listu">
+
+        </ul></div>
+        <script src="js/popper.min.js"></script>
+        <script src="js/jquery-3.5.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script>
+           $(document).ready(function(){
+               var count =0;
+               var currentId ='';
+               $('#edit').addClass('hide');
+               $('#remove').addClass('hide');
+               $('#cancel').addClass('hide');
+             $("#add").click(function(){
+               var input1= $('#txt');
+               if(input1.val()==" "){
+                   alert('tyou vant add correct');
+               }   
+              else{ 
+            var listItem=$('<li id="'+count+'"  >' +input1.val()+'</li>')
+            count++;
+            $('ul').append(listItem)   ; 
+            $('#txt').val(""); 
+           
+              
+
+              $('#listu li').click(function(){
+                  var v=$('#txt').val($(this).text());
+                   currentId=$(this).attr('id');
+                   $('#add').addClass('hide');
+                   $('#edit').removeClass('hide ');
+               $('#remove').removeClass('hide');
+               $('#cancel').removeClass('hide');
+                })
+                $('#edit').click(function(){
+                   console.log(currentId);
+
+
+                 $('li#'+currentId).text($('#txt').val()); 
+                 $('#edit').addClass('hide ');
+               $('#remove').addClass('hide');
+               $('#cancel').addClass('hide');
+               $('#add').removeClass('hide');
+                })
+                $('#remove').click(function(){
+                   console.log(currentId);
+                   $('li#'+currentId).remove(); 
+                   $('#edit').addClass('hide ');
+               $('#remove').addClass('hide');
+               $('#cancel').addClass('hide');
+               $('#add').removeClass('hide');
+  $('#txt').val("");
+                })
+                $('#cancel').click(function(){
+
+                   $('#edit').addClass('hide ');
+               $('#remove').addClass('hide');
+               $('#cancel').addClass('hide');
+               $('#add').removeClass('hide');
+
+                })
+            }     
+            
+            
+            
+            
+            }) 
+
+           })
+        </script>
+        
+    </body>
+</html>
