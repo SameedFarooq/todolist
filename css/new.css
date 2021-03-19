@@ -1,0 +1,19 @@
+.a{
+    font-size: x-large;
+}
+.abox{
+    border: 5px solid rgb(179, 29, 29);
+    height: 60px;
+}
+.bbox{
+    border: 5px solid rgb(12, 190, 21);
+    height: 60px;
+}
+.cbox{
+    border: 5px solid rgb(15, 155, 190);
+    height: 60px; 
+}
+.dbox{
+    border: 5px solid rgb(63, 26, 36);
+    height: 60px;
+}

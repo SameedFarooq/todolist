@@ -1,0 +1,17 @@
+.br{
+    background-color: greenyellow;
+    height: 20px;
+}
+.br1{
+    background-color: rgb(47, 127, 255);
+    height: 20px;
+}
+.boot5{
+    border: 2px solid rgb(46, 73, 5);
+    height: 500px;
+}
+.boot51{
+         border:2px solid rgb(33, 86, 202);
+        
+    /* height: 30px; */
+}

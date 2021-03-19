@@ -1,145 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title>Javascript: add edit delete LI</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        body {
-            width: 500px;
+        <style>
+          .navi{
+            /* display: flex;
+            flex-direction: column; */
             margin: auto;
-            height: 500px;
-            background-color: aqua;
-        }
-
-        #input1 {
-            padding: 10px;
-            width: 250px;
-            height: 48px;
-            font-size: 15px;
-            outline: none;
-            font-size: large;
-            position: relative;
-
-        }
-
-        #btn1 {
-            height: 50px;
-            width: 50px;
-
-        }  .btn1 {
-            height: 48px;
-            width: 70px;
-            background-color: honeydew;
-            outline: none;
-            position: fixed;
-            position: fixed;
-    top: 203px;
-    left: 1155px;
-      border: none;
-        }
-         .btn2 {
-            height: 48px;
-            width: 70px;
-            background-color: honeydew;
-            outline: none;
-            position: fixed;
-    top: 203px;
-    left: 1155px;
-      border: none;
-        }
-        .btn1:hover{
-            opacity: 0.7;
-        }
-
-        .to-dos {
-            margin-top: 25px;
-            font-size: x-large;
-            color: rgb(30, 31, 34);
-            padding-bottom: 27px;
-        }
-
-        .paragraph-styling {
-            margin: 0px;
-            cursor: pointer;
-            font-size: 20px;
-        }
-
-
-        .container {
-            margin-top: 30%;
-            background-color: rgb(96, 155, 109);
-            width: 600px;
-            height: auto;
-            text-align: center;
-            left: 15px;
-            position: relative;
-        }
-        h1{
-           padding-top: 15px;
-        }
-        .add{
-            border: none;
-            color:rgb(0, 233, 0);
-            font-size: medium;
-        background-color: rgb(96, 155, 109);
-        margin-right:10px ;
+            /* background-image: url(green.jpg); */
+          }  
+body{
+    background-color: rgb(23, 129, 143);
+}
+li{cursor: pointer;
+   font-size:medium;
+}
+    .contain{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contain1{
+        display: flex;
+    
+        position: relative;
+        left: 500px;
+    top: 22px;
+    }
+    input{
+        border-radius: 9px;
         outline: none;
-        font-size: 1.4rem;
-        }
-        .add:hover{
-            opacity: 0.7;
-        }
-        .remove{
-            border: none;
-            color:rgb(233, 0, 89);
-            font-size: medium;
-            font-size: 1.4rem;
-        background-color:rgb(96, 155, 109);
-        outline: none;
-        }
-        .remove:hover{
-        opacity: 0.7;
-       
-        }
-        .divv{
-            background-color: honeydew;
-            width: 600px;
-            padding: 25px ;
-            font-size: 1.4rem;
-        }
-        .new{
-            top: 50px;
-    position: absolute;
-    left: 427px
+        width: 266px;
+    padding: 4px;
+    position: sticky;
+    }
+    .hide{
+         visibility: hidden;
+        /* display: none; */
+    }
+     .show{
 
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container" id="contain">
-        <div><h1>To Do List</h1>
-        <input type="text" id="input1" placeholder="Enter Value"><button type="button" id="btn1">+</button>
-    </div>   <div class="to-dos" id="addtodo">
-
-        </div>
-        <div id="end">
-
-        </div>
+ visibility: show; 
+    } 
+/* display: ; */
+/* display: unset; */
+    .btn11{
+        padding: 3px 7px;
+        font-size: 13px;
+        color:rgb(255, 245, 245)!important ;
+    }
+    .bord{
+     border-right:3px solid rgba(255, 255, 255,1); 
+        /* border-right: rgb(255, 255, 255); */
+        /* background-color: rgba(4, 73, 4,0.8); */
+        background-image: url(blue1.jpg);
         
-    <script src="js/22.js">
+    }
+    a{
+        color: rgba(255, 245, 245,0.9);
+    }
+    i{
+        font-size: 28px;
+        margin-right: 2px;
+    }
+    .colo{
+        color: rgb(255, 255, 255);
+    }
+    .colo:hover{
+        color:  rgb(255, 255, 255);
+    }
+        </style>
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm   bord py-3">
+         <a class="navbar-brand colo " href="#"><i class="fab fa-google-plus  colo"></i>GoodData</a>
+        <ul class="navbar-nav navi text-dark">
+            <li class="nav-item mr-2"><a href="#" class="nav-link">Platform</a></li>
+            <li class="nav-item mr-2"><a href="#" class="nav-link">Solutions</a></li>
+            <li class="nav-item mr-2"><a href="#" class="nav-link">Pricing</a></li>
+            <li class="nav-item mr-2" ><a href="#" class="nav-link">Learn</a></li>
+            <li class="nav-item mr-2"><a href="#" class="nav-link">Resources</a></li>
+            <li class="nav-item mr-2"><a href="#" class="nav-link">Company</a></li>
+            <li class="nav-item mr-2"><a href="#" class="nav-link">Blog</a></li>
+        </ul>
+        <a href="#" class="nav-link">Login</a>
+        <a class="btn btn-outline-light btn11 colo">Get a demo</a>
+        </nav>
+       <div class="contain">
+        <input type="text" class="mr-2"id="txt">
+        <button id="add" class="btn btn-warning mr-2"onclick="addLI()">Add</button>
+        <button id="edit" class="btn btn-success mr-2"onclick="editLI()">Edit</button>
+        <button id="remove"class="btn btn-danger mr-2"onclick="deleteLI()">Delete</button>
+    </div>    
+    <div class="contain1"> 
+    <ul id="list">
 
-    </script>
-</body>
-
+        </ul></div>
+        <script src="js/jquery-3.5.1.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script>
+            
+            var inputText = document.getElementById("txt"),
+            items = document.querySelectorAll("#list li"),
+            tab = [], index;
+            var btn=document.getElementById("edit");
+            var btn2=document.getElementById("remove");
+            var btn3=document.getElementById("add");
+            btn.className="hide";
+                btn2.className="hide";         
+             // get the selected li index using array
+             // populate array with li values
+             
+             for(var i = 0; i < items.length; i++){
+                 tab.push(items[i].innerHTML);
+             }
+             
+             // get li index onclick
+             for(var i = 0; i < items.length; i++){
+                 
+                 items[i].onclick = function(){
+                     index = tab.indexOf(this.innerHTML);
+                     console.log(this.innerHTML + " INDEX = " + index);
+                     // set the selected li value into input text
+                     inputText.value = this.innerHTML;
+                 };
+                 
+             }
+            
+            function refreshArray()
+            {
+                // clear array
+                tab.length = 0;
+                items = document.querySelectorAll("#list li");
+                // fill array
+                for(var i = 0; i < items.length; i++){
+                 tab.push(items[i].innerHTML);
+               }
+            }
+            function addLI(){
+                var listNode = document.getElementById("list"),
+                textNode = document.createTextNode(inputText.value),
+                liNode = document.createElement("LI");
+                
+                liNode.appendChild(textNode);
+                listNode.appendChild(liNode);
+                
+                refreshArray();
+                
+                // add event to the new LI
+                
+                liNode.onclick = function(){
+                    index = tab.indexOf(liNode.innerHTML);
+                    console.log(liNode.innerHTML + " INDEX = " + index);
+                    // set the selected li value into input text
+                    inputText.value = liNode.innerHTML;
+                    btn3.className="hide mr-0"; 
+                    btn.className="show btn btn-success mr-2";
+                    btn2.className="show btn btn-danger mr-2";
+                    };
+                    inputText.value="";
+                }
+             
+             function editLI(){
+                 // edit the selected li using input text
+                 btn3.className="show btn btn-warning";
+                 items[index].innerHTML = inputText.value;
+                 refreshArray();
+                 btn.className="hide";
+                 btn2.className="hide";
+                 input.value="";
+            }
+            
+            function deleteLI(){
+                  btn3.className="show  btn btn-warning";
+                  
+                      refreshArray();
+                      if(items.length > 0){
+                          items[index].parentNode.removeChild(items[index]);
+                          inputText.value = "";
+                          btn.className="hide";
+                 btn2.className="hide";
+                        }
+              }
+            
+        </script>
+        
+    </body>
 </html>
