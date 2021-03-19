@@ -1,0 +1,28 @@
+/* .arow{
+    border: 5px solid yellow;
+  } */
+  .cbox{
+      border: 5px solid black;
+  }
+  .adiv{
+    /* height: 60px; */
+    background-color: #5f9ea0;
+   
+    
+}
+.bdiv{
+    /* height: 60px; */
+    background-color: rgb(95, 160, 95);}
+    .nest{
+        border: 2px solid black;
+
+    }
+    .lorem1{
+        border: 2px solid rgb(3, 10, 3);
+    }
+    .lorem2{
+        border: 2px solid purple;
+    }
+    .img1{
+        border: 5px solid grey;
+    }

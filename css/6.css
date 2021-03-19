@@ -1,0 +1,37 @@
+*{
+    font-size: large;
+    font-weight: bold;
+}
+.arow{
+  border: 5px solid yellow;
+}
+.cbox{
+    border: 5px solid black;
+}
+.adiv{
+    height: 60px;
+    background-color: #5f9ea0;
+   
+    
+}
+.bdiv{
+    height: 60px;
+    background-color: rgb(95, 160, 95);
+}
+.cdiv{
+    height: 60px;
+    background-color: rgb(57, 93, 214);
+}
+.ddiv{
+    height: 60px;
+    background-color: rgb(216, 44, 202);
+}
+.ediv{
+    height: 60px;
+    background-color: rgb(230, 23, 68);
+}
+
+.fdiv{
+    height: 60px;
+    background-color: rgb(88, 49, 11);
+}
